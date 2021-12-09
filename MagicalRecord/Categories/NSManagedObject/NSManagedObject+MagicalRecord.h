@@ -21,6 +21,7 @@
 + (NSUInteger) MR_defaultBatchSize;
 + (void) MR_setDefaultBatchSize:(NSUInteger)newBatchSize;
 
++ (MR_nullable MR_NSArrayOfNSManagedObjects) MR_executeFetchRequest:(MR_nonnull NSFetchRequest *)request;
 + (MR_nullable MR_NSArrayOfNSManagedObjects) MR_executeFetchRequest1:(MR_nonnull NSFetchRequest *)request;
 + (MR_nullable MR_NSArrayOfNSManagedObjects) MR_executeFetchRequest:(MR_nonnull NSFetchRequest *)request inContext:(MR_nonnull NSManagedObjectContext *)context;
 + (MR_nullable instancetype) MR_executeFetchRequestAndReturnFirstObject:(MR_nonnull NSFetchRequest *)request;
