@@ -70,6 +70,14 @@ static NSUInteger kMagicalRecordDefaultBatchSize = 20;
 #pragma clang diagnostic pop
 }
 
++ (NSArray *) MR_executeFetchRequest1:(NSFetchRequest *)request
+{
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+	return [self MR_executeFetchRequest:request inContext:[NSManagedObjectContext MR_contextForCurrentThread]];
+#pragma clang diagnostic pop
+}
+
 + (id) MR_executeFetchRequestAndReturnFirstObject:(NSFetchRequest *)request inContext:(NSManagedObjectContext *)context
 {
 	[request setFetchLimit:1];
